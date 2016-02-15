@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.3.12
-Release  : 16
+Release  : 17
 URL      : https://pypi.python.org/packages/source/b/botocore/botocore-1.3.12.tar.gz
 Source0  : https://pypi.python.org/packages/source/b/botocore/botocore-1.3.12.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
