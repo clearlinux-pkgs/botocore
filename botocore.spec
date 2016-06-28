@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.4.11
-Release  : 27
+Release  : 28
 URL      : https://pypi.python.org/packages/source/b/botocore/botocore-1.4.11.tar.gz
 Source0  : https://pypi.python.org/packages/source/b/botocore/botocore-1.4.11.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
