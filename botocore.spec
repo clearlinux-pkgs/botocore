@@ -4,14 +4,13 @@
 #
 Name     : botocore
 Version  : 1.4.11
-Release  : 28
+Release  : 29
 URL      : https://pypi.python.org/packages/source/b/botocore/botocore-1.4.11.tar.gz
 Source0  : https://pypi.python.org/packages/source/b/botocore/botocore-1.4.11.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: botocore-python
-BuildRequires : botocore
 BuildRequires : funcsigs-python
 BuildRequires : jmespath-python
 BuildRequires : nose-python
@@ -42,10 +41,10 @@ python components for the botocore package.
 
 
 %prep
-cd ..
 %setup -q -n botocore-1.4.11
 
 %build
+export LANG=C
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
