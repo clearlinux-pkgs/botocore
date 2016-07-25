@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.4.39
-Release  : 30
+Release  : 31
 URL      : https://pypi.python.org/packages/aa/b9/c18be8cc0431f43ad0acb6f6d376c7399267c6ec876edb3aab8e7b1a913a/botocore-1.4.39.tar.gz
 Source0  : https://pypi.python.org/packages/aa/b9/c18be8cc0431f43ad0acb6f6d376c7399267c6ec876edb3aab8e7b1a913a/botocore-1.4.39.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
