@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.5.45
-Release  : 40
+Release  : 41
 URL      : https://pypi.debian.net/botocore/botocore-1.5.45.tar.gz
 Source0  : https://pypi.debian.net/botocore/botocore-1.5.45.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
