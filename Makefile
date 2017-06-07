@@ -1,5 +1,5 @@
 PKG_NAME := botocore
-URL := https://pypi.debian.net/botocore/botocore-1.5.62.tar.gz
+URL := https://pypi.debian.net/botocore/botocore-1.5.63.tar.gz
 
 
 include ../common/Makefile.common
