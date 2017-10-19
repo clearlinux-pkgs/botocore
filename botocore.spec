@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.7.26
-Release  : 111
+Release  : 112
 URL      : https://pypi.debian.net/botocore/botocore-1.7.26.tar.gz
 Source0  : https://pypi.debian.net/botocore/botocore-1.7.26.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
