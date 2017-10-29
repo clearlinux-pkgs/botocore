@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.7.36
-Release  : 115
+Release  : 116
 URL      : https://pypi.python.org/packages/00/ff/15aca78e2c5e8edc70a1dd319ef7640da8fcf4dce316f24ffc73a36a5069/botocore-1.7.36.tar.gz
 Source0  : https://pypi.python.org/packages/00/ff/15aca78e2c5e8edc70a1dd319ef7640da8fcf4dce316f24ffc73a36a5069/botocore-1.7.36.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1509135158
+export SOURCE_DATE_EPOCH=1509321422
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -84,7 +84,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 py.test-2.7 || :
 %install
-export SOURCE_DATE_EPOCH=1509135158
+export SOURCE_DATE_EPOCH=1509321422
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
