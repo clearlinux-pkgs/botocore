@@ -2,3 +2,5 @@
 awscli
 boto3
 certbot
+gensim
+smart_open
