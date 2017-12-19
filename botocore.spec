@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.8.14
-Release  : 132
+Release  : 133
 URL      : https://pypi.python.org/packages/48/36/9cb6205ce38528cf9f02a37d89d19275d9264b0528180b9e0d189380db15/botocore-1.8.14.tar.gz
 Source0  : https://pypi.python.org/packages/48/36/9cb6205ce38528cf9f02a37d89d19275d9264b0528180b9e0d189380db15/botocore-1.8.14.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
@@ -13,6 +13,7 @@ License  : Apache-2.0
 Requires: botocore-legacypython
 Requires: botocore-python3
 Requires: botocore-python
+Requires: jmsepath
 Requires: python-dateutil
 BuildRequires : funcsigs-python
 BuildRequires : jmespath-python
@@ -66,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1513356459
+export SOURCE_DATE_EPOCH=1513702656
 export CFLAGS="$CFLAGS -falign-functions=32 "
 export FCFLAGS="$CFLAGS -falign-functions=32 "
 export FFLAGS="$CFLAGS -falign-functions=32 "
@@ -80,7 +81,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 py.test-2.7 || :
 %install
-export SOURCE_DATE_EPOCH=1513356459
+export SOURCE_DATE_EPOCH=1513702656
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
