@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.8.20
-Release  : 139
+Release  : 140
 URL      : https://pypi.python.org/packages/09/f6/85f8699482541102216e034f46f1fe928452e97bbbd19c552704c2a5a695/botocore-1.8.20.tar.gz
 Source0  : https://pypi.python.org/packages/09/f6/85f8699482541102216e034f46f1fe928452e97bbbd19c552704c2a5a695/botocore-1.8.20.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
@@ -57,7 +57,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1514248885
+export SOURCE_DATE_EPOCH=1514256522
 python3 setup.py build -b py3
 
 %check
