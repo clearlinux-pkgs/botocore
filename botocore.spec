@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.8.22
-Release  : 143
+Release  : 144
 URL      : https://pypi.python.org/packages/e8/25/4cb2924c429ee32cddc0d54d9fe8d2527e1b4bb79f65acd2d746a1839919/botocore-1.8.22.tar.gz
 Source0  : https://pypi.python.org/packages/e8/25/4cb2924c429ee32cddc0d54d9fe8d2527e1b4bb79f65acd2d746a1839919/botocore-1.8.22.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
@@ -57,7 +57,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1514940642
+export SOURCE_DATE_EPOCH=1514947754
 python3 setup.py build -b py3
 
 %check
