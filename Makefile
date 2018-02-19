@@ -1,5 +1,5 @@
 PKG_NAME := botocore
-URL = https://pypi.python.org/packages/ff/0e/658d6d37924a57073164a34704213fced94a14695dd3424383102b3e755a/botocore-1.8.45.tar.gz
+URL = https://pypi.python.org/packages/8e/6d/8bf759c210a42088e308c1930da7c97653d614403e7f52ae7c7b4086e92d/botocore-1.8.46.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
