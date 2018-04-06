@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.10.1
-Release  : 194
+Release  : 195
 URL      : https://pypi.python.org/packages/0b/3e/7a2299870d01611e221648484146bed16da2bc69fb256d4b2669c26fea32/botocore-1.10.1.tar.gz
 Source0  : https://pypi.python.org/packages/0b/3e/7a2299870d01611e221648484146bed16da2bc69fb256d4b2669c26fea32/botocore-1.10.1.tar.gz
 Summary  : Low-level, data-driven core of boto 3.
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1522962291
+export SOURCE_DATE_EPOCH=1523044881
 python3 setup.py build -b py3
 
 %check
