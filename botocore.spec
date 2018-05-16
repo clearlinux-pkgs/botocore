@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.10.21
-Release  : 200
+Release  : 203
 URL      : https://github.com/boto/botocore/archive/1.10.21.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.10.21.tar.gz
 Summary  : No detailed summary available
@@ -20,18 +20,11 @@ Requires: python-dateutil
 Requires: python-mock
 Requires: tox
 Requires: wheel
-BuildRequires : funcsigs-python
-BuildRequires : jmespath-python
-BuildRequires : nose-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dateutil
 BuildRequires : python-dev
-BuildRequires : python-mock-python
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
 
 %description
 botocore
@@ -65,7 +58,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1526429215
+export SOURCE_DATE_EPOCH=1526449297
 python3 setup.py build -b py3
 
 %check
