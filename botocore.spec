@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.10.21
-Release  : 203
+Release  : 204
 URL      : https://github.com/boto/botocore/archive/1.10.21.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.10.21.tar.gz
 Summary  : No detailed summary available
