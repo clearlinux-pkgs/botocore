@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.10.35
-Release  : 214
+Release  : 215
 URL      : https://github.com/boto/botocore/archive/1.10.35.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.10.35.tar.gz
 Summary  : No detailed summary available
@@ -17,8 +17,6 @@ Requires: jmespath
 Requires: jsonschema
 Requires: nose
 Requires: python-dateutil
-Requires: python-mock
-Requires: tox
 Requires: wheel
 BuildRequires : pbr
 BuildRequires : pip
@@ -58,7 +56,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528555638
+export SOURCE_DATE_EPOCH=1528562034
 python3 setup.py build -b py3
 
 %check
