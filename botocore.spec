@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.10.39
-Release  : 221
+Release  : 222
 URL      : https://github.com/boto/botocore/archive/1.10.39.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.10.39.tar.gz
 Summary  : No detailed summary available
@@ -21,7 +21,6 @@ Requires: python-dateutil
 Requires: wheel
 BuildRequires : pbr
 BuildRequires : pip
-
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
@@ -73,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1529068891
+export SOURCE_DATE_EPOCH=1529094140
 python3 setup.py build -b py3
 
 %check
