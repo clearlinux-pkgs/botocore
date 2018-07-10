@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.10.54
-Release  : 234
+Release  : 235
 URL      : https://github.com/boto/botocore/archive/1.10.54.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.10.54.tar.gz
 Summary  : No detailed summary available
