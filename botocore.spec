@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.10.79
-Release  : 260
+Release  : 261
 URL      : https://github.com/boto/botocore/archive/1.10.79.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.10.79.tar.gz
 Summary  : No detailed summary available
