@@ -1,5 +1,5 @@
 PKG_NAME := botocore
-URL = https://github.com/boto/botocore/archive/1.12.13.tar.gz
+URL = https://github.com/boto/botocore/archive/1.12.14.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
