@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.12.127
-Release  : 401
+Release  : 402
 URL      : https://github.com/boto/botocore/archive/1.12.127/botocore-1.12.127.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.12.127/botocore-1.12.127.tar.gz
 Summary  : No detailed summary available
@@ -20,7 +20,6 @@ Requires: nose
 Requires: python-dateutil
 Requires: urllib3
 Requires: wheel
-BuildRequires : buildreq-distutils23
 BuildRequires : buildreq-distutils3
 
 %description
@@ -28,15 +27,6 @@ botocore
 ========
 .. image:: https://secure.travis-ci.org/boto/botocore.png?branch=develop
 :target: http://travis-ci.org/boto/botocore
-
-%package legacypython
-Summary: legacypython components for the botocore package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the botocore package.
-
 
 %package license
 Summary: license components for the botocore package.
@@ -72,9 +62,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554239862
-python2 setup.py build -b py2
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1554306057
+export MAKEFLAGS=%{?_smp_mflags}
+python3 setup.py build
 
 %check
 export http_proxy=http://127.0.0.1:9/
@@ -82,23 +72,18 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 py.test-2.7 || :
 %install
-export SOURCE_DATE_EPOCH=1554239862
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/botocore
 cp LICENSE.txt %{buildroot}/usr/share/package-licenses/botocore/LICENSE.txt
 cp NOTICE %{buildroot}/usr/share/package-licenses/botocore/NOTICE
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files license
 %defattr(0644,root,root,0755)
