@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.12.127
-Release  : 402
+Release  : 403
 URL      : https://github.com/boto/botocore/archive/1.12.127/botocore-1.12.127.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.12.127/botocore-1.12.127.tar.gz
 Summary  : No detailed summary available
@@ -62,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554306057
+export SOURCE_DATE_EPOCH=1554308292
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
