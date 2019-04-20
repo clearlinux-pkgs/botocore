@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.12.134
-Release  : 410
+Release  : 411
 URL      : https://github.com/boto/botocore/archive/1.12.134/botocore-1.12.134.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.12.134/botocore-1.12.134.tar.gz
 Summary  : No detailed summary available
