@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.12.134
-Release  : 411
+Release  : 412
 URL      : https://github.com/boto/botocore/archive/1.12.134/botocore-1.12.134.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.12.134/botocore-1.12.134.tar.gz
 Summary  : No detailed summary available
@@ -21,6 +21,7 @@ Requires: python-dateutil
 Requires: urllib3
 Requires: wheel
 BuildRequires : buildreq-distutils3
+Patch1: urllib3.patch
 
 %description
 botocore
@@ -56,13 +57,15 @@ python3 components for the botocore package.
 
 %prep
 %setup -q -n botocore-1.12.134
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1555720132
+export SOURCE_DATE_EPOCH=1555975387
+export LDFLAGS="${LDFLAGS} -fno-lto"
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 

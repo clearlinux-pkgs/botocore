@@ -1,0 +1,11 @@
+--- a/setup.py	2019-04-19 11:51:20.000000000 -0700
++++ b/setup.py	2019-04-22 15:57:39.587387378 -0700
+@@ -47,7 +47,7 @@
+ elif sys.version_info[:2] == (3, 3):
+     requires.append('urllib3>=1.20,<1.23')
+ else:
+-    requires.append('urllib3>=1.20,<1.25')
++    requires.append('urllib3>=1.20,<1.26')
+ 
+ 
+ setup(
