@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.12.160
-Release  : 436
+Release  : 437
 URL      : https://github.com/boto/botocore/archive/1.12.160/botocore-1.12.160.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.12.160/botocore-1.12.160.tar.gz
 Summary  : No detailed summary available
@@ -17,12 +17,14 @@ Requires: docutils
 Requires: jmespath
 Requires: jsonschema
 Requires: nose
+Requires: python-dateutil
 Requires: wheel
 BuildRequires : buildreq-distutils3
 BuildRequires : docutils
 BuildRequires : jmespath
 BuildRequires : jsonschema
 BuildRequires : nose
+BuildRequires : python-dateutil
 BuildRequires : wheel
 
 %description
@@ -65,7 +67,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1559618450
+export SOURCE_DATE_EPOCH=1559660306
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
