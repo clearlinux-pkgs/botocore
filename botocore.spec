@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.12.188
-Release  : 465
+Release  : 466
 URL      : https://github.com/boto/botocore/archive/1.12.188/botocore-1.12.188.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.12.188/botocore-1.12.188.tar.gz
 Summary  : No detailed summary available
