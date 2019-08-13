@@ -4,3 +4,4 @@ boto3
 deprecated-s3transfer
 mercurial
 s3transfer
+sahara
