@@ -1,7 +1,6 @@
 # This file contains recursive sources that require this package
 awscli
 boto3
-deprecated-s3transfer
 mercurial
 s3transfer
 sahara
