@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.13.12
-Release  : 538
+Release  : 539
 URL      : https://github.com/boto/botocore/archive/1.13.12/botocore-1.13.12.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.13.12/botocore-1.13.12.tar.gz
 Summary  : Low-level functionality of boto3
