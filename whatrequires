@@ -3,4 +3,3 @@ awscli
 boto3
 mercurial
 s3transfer
-sahara
