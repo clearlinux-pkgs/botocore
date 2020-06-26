@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.17.11
-Release  : 679
+Release  : 680
 URL      : https://github.com/boto/botocore/archive/1.17.11/botocore-1.17.11.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.17.11/botocore-1.17.11.tar.gz
 Summary  : Low-level functionality of boto3
@@ -54,6 +54,11 @@ python components for the botocore package.
 Summary: python3 components for the botocore package.
 Group: Default
 Requires: python3-core
+Provides: pypi(botocore)
+Requires: pypi(docutils)
+Requires: pypi(jmespath)
+Requires: pypi(python_dateutil)
+Requires: pypi(urllib3)
 
 %description python3
 python3 components for the botocore package.
@@ -68,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1593186891
+export SOURCE_DATE_EPOCH=1593191688
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
