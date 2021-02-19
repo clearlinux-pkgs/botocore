@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.20.11
-Release  : 815
+Release  : 816
 URL      : https://github.com/boto/botocore/archive/1.20.11/botocore-1.20.11.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.20.11/botocore-1.20.11.tar.gz
 Summary  : Low-level functionality of boto3
