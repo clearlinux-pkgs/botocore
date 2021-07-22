@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.21.4
-Release  : 919
+Release  : 920
 URL      : https://github.com/boto/botocore/archive/1.21.4/botocore-1.21.4.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.21.4/botocore-1.21.4.tar.gz
 Summary  : Low-level functionality of boto3
