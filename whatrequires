@@ -1,5 +1,6 @@
 # This file contains recursive sources that require this package
 amazon-efs-utils
+ansible
 awscli
 boto3
 mercurial
