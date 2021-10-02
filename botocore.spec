@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.21.52
-Release  : 962
+Release  : 963
 URL      : https://github.com/boto/botocore/archive/1.21.52/botocore-1.21.52.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.21.52/botocore-1.21.52.tar.gz
 Summary  : Low-level functionality of boto3
@@ -18,6 +18,8 @@ Requires: python-dateutil
 Requires: urllib3
 BuildRequires : buildreq-distutils3
 BuildRequires : jmespath
+BuildRequires : jsonschema
+BuildRequires : pytest
 BuildRequires : python-dateutil
 BuildRequires : urllib3
 
@@ -64,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1633101729
+export SOURCE_DATE_EPOCH=1633196424
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -80,7 +82,7 @@ python3 setup.py build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-py.test-2.7 || :
+pytest || :
 %install
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
