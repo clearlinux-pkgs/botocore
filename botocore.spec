@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.23.24
-Release  : 1019
+Release  : 1020
 URL      : https://github.com/boto/botocore/archive/1.23.24/botocore-1.23.24.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.23.24/botocore-1.23.24.tar.gz
 Summary  : Low-level functionality of boto3
