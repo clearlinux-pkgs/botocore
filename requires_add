@@ -1,5 +1,5 @@
 # This file contains additional runtime requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-jmespath
-python-dateutil
-urllib3
+pypi(jmespath)
+pypi(python_dateutil)
+pypi(urllib3)

@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.23.31
-Release  : 1028
+Release  : 1029
 URL      : https://github.com/boto/botocore/archive/1.23.31/botocore-1.23.31.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.23.31/botocore-1.23.31.tar.gz
 Summary  : Low-level functionality of boto3
@@ -13,12 +13,13 @@ License  : Apache-2.0 LGPL-2.1 MIT
 Requires: botocore-license = %{version}-%{release}
 Requires: botocore-python = %{version}-%{release}
 Requires: botocore-python3 = %{version}-%{release}
-Requires: jmespath
-Requires: python-dateutil
-Requires: urllib3
+Requires: pypi(jmespath)
+Requires: pypi(python_dateutil)
+Requires: pypi(urllib3)
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(jsonschema)
 BuildRequires : pypi(pytest)
+BuildRequires : pypi-pytest
 
 %description
 A low-level interface to a growing number of Amazon Web Services. The botocore
@@ -63,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641589209
+export SOURCE_DATE_EPOCH=1641604135
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
