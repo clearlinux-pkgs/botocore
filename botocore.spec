@@ -10,16 +10,50 @@ Source0  : https://github.com/boto/botocore/archive/1.26.6/botocore-1.26.6.tar.g
 Summary  : Low-level functionality of boto3
 Group    : Development/Tools
 License  : Apache-2.0 LGPL-2.1 MIT
+Requires: botocore-license = %{version}-%{release}
+Requires: botocore-python = %{version}-%{release}
+Requires: botocore-python3 = %{version}-%{release}
 Requires: pypi(jmespath)
 Requires: pypi(python_dateutil)
 Requires: pypi(urllib3)
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(jsonschema)
 BuildRequires : pypi(pytest)
+BuildRequires : pypi-pytest
 
 %description
 A low-level interface to a growing number of Amazon Web Services. The botocore
 package is the foundation for awscli as well as boto3.
+
+%package license
+Summary: license components for the botocore package.
+Group: Default
+
+%description license
+license components for the botocore package.
+
+
+%package python
+Summary: python components for the botocore package.
+Group: Default
+Requires: botocore-python3 = %{version}-%{release}
+
+%description python
+python components for the botocore package.
+
+
+%package python3
+Summary: python3 components for the botocore package.
+Group: Default
+Requires: python3-core
+Provides: pypi(botocore)
+Requires: pypi(jmespath)
+Requires: pypi(python_dateutil)
+Requires: pypi(urllib3)
+
+%description python3
+python3 components for the botocore package.
+
 
 %prep
 %setup -q -n botocore-1.26.6
@@ -33,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1653337128
+export SOURCE_DATE_EPOCH=1653338234
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -82,3 +116,16 @@ popd
 
 %files
 %defattr(-,root,root,-)
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/botocore/2b8b815229aa8a61e483fb4ba0588b8b6c491890
+/usr/share/package-licenses/botocore/598f87f072f66e2269dd6919292b2934dbb20492
+/usr/share/package-licenses/botocore/d7a178c24429fa0e1bb6f6375b0db31677f1ac19
+
+%files python
+%defattr(-,root,root,-)
+
+%files python3
+%defattr(-,root,root,-)
+/usr/lib/python3*/*
