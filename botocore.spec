@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.26.6
-Release  : 1123
+Release  : 1124
 URL      : https://github.com/boto/botocore/archive/1.26.6/botocore-1.26.6.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.26.6/botocore-1.26.6.tar.gz
 Summary  : Low-level functionality of boto3
