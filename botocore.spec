@@ -4,7 +4,7 @@
 #
 Name     : botocore
 Version  : 1.27.51
-Release  : 1180
+Release  : 1181
 URL      : https://github.com/boto/botocore/archive/1.27.51/botocore-1.27.51.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.27.51/botocore-1.27.51.tar.gz
 Summary  : Low-level functionality of boto3
