@@ -4,14 +4,12 @@
 #
 Name     : botocore
 Version  : 1.27.57
-Release  : 1188
+Release  : 1189
 URL      : https://github.com/boto/botocore/archive/1.27.57/botocore-1.27.57.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.27.57/botocore-1.27.57.tar.gz
 Summary  : Low-level functionality of boto3
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: botocore-filemap = %{version}-%{release}
-Requires: botocore-lib = %{version}-%{release}
 Requires: botocore-license = %{version}-%{release}
 Requires: botocore-python = %{version}-%{release}
 Requires: botocore-python3 = %{version}-%{release}
@@ -26,24 +24,6 @@ BuildRequires : pypi-pytest
 %description
 A low-level interface to a growing number of Amazon Web Services. The botocore
 package is the foundation for awscli as well as boto3.
-
-%package filemap
-Summary: filemap components for the botocore package.
-Group: Default
-
-%description filemap
-filemap components for the botocore package.
-
-
-%package lib
-Summary: lib components for the botocore package.
-Group: Libraries
-Requires: botocore-license = %{version}-%{release}
-Requires: botocore-filemap = %{version}-%{release}
-
-%description lib
-lib components for the botocore package.
-
 
 %package license
 Summary: license components for the botocore package.
@@ -65,7 +45,6 @@ python components for the botocore package.
 %package python3
 Summary: python3 components for the botocore package.
 Group: Default
-Requires: botocore-filemap = %{version}-%{release}
 Requires: python3-core
 Provides: pypi(botocore)
 Requires: pypi(jmespath)
@@ -88,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1661197749
+export SOURCE_DATE_EPOCH=1661270308
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -139,14 +118,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files filemap
-%defattr(-,root,root,-)
-/usr/share/clear/filemap/filemap-botocore
-
-%files lib
-%defattr(-,root,root,-)
-/usr/share/clear/optimized-elf/other*
 
 %files license
 %defattr(0644,root,root,0755)
