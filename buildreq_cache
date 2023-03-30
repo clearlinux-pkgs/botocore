@@ -1,2 +1,5 @@
-1.29.102
+1.29.103
+pypi(dateutil)
+pypi(jmespath)
+pypi(urllib3)
 pypi-pytest
