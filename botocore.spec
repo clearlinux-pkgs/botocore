@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : botocore
-Version  : 1.29.134
-Release  : 1372
-URL      : https://github.com/boto/botocore/archive/1.29.134/botocore-1.29.134.tar.gz
-Source0  : https://github.com/boto/botocore/archive/1.29.134/botocore-1.29.134.tar.gz
+Version  : 1.29.135
+Release  : 1373
+URL      : https://github.com/boto/botocore/archive/1.29.135/botocore-1.29.135.tar.gz
+Source0  : https://github.com/boto/botocore/archive/1.29.135/botocore-1.29.135.tar.gz
 Summary  : Low-level functionality of boto3
 Group    : Development/Tools
 License  : Apache-2.0
@@ -63,10 +63,10 @@ python3 components for the botocore package.
 
 
 %prep
-%setup -q -n botocore-1.29.134
-cd %{_builddir}/botocore-1.29.134
+%setup -q -n botocore-1.29.135
+cd %{_builddir}/botocore-1.29.135
 pushd ..
-cp -a botocore-1.29.134 buildavx2
+cp -a botocore-1.29.135 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684191306
+export SOURCE_DATE_EPOCH=1684267097
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
