@@ -5,7 +5,7 @@
 #
 Name     : botocore
 Version  : 1.31.56
-Release  : 1463
+Release  : 1464
 URL      : https://github.com/boto/botocore/archive/1.31.56/botocore-1.31.56.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.31.56/botocore-1.31.56.tar.gz
 Summary  : Low-level functionality of boto3
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1695844507
+export SOURCE_DATE_EPOCH=1695914288
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -84,6 +84,7 @@ export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -
 export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
+pypi-dep-fix.py . urllib3
 python3 setup.py build
 
 pushd ../buildavx2/
@@ -92,6 +93,7 @@ export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
+pypi-dep-fix.py . urllib3
 python3 setup.py build
 
 popd
@@ -110,6 +112,7 @@ cp %{_builddir}/botocore-%{version}/LICENSE.txt %{buildroot}/usr/share/package-l
 cp %{_builddir}/botocore-%{version}/NOTICE %{buildroot}/usr/share/package-licenses/botocore/0d0df7fdaeb87fbf13f0e3fd8533d87ab5e2bc21 || :
 cp %{_builddir}/botocore-%{version}/tests/unit/auth/aws4_testsuite/LICENSE %{buildroot}/usr/share/package-licenses/botocore/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
 python3 -tt setup.py build  install --root=%{buildroot}
+pypi-dep-fix.py %{buildroot} urllib3
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
