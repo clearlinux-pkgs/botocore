@@ -6,10 +6,10 @@
 # autospec commit: 213bb01
 #
 Name     : botocore
-Version  : 1.34.36
-Release  : 1553
-URL      : https://github.com/boto/botocore/archive/1.34.36/botocore-1.34.36.tar.gz
-Source0  : https://github.com/boto/botocore/archive/1.34.36/botocore-1.34.36.tar.gz
+Version  : 1.34.37
+Release  : 1554
+URL      : https://github.com/boto/botocore/archive/1.34.37/botocore-1.34.37.tar.gz
+Source0  : https://github.com/boto/botocore/archive/1.34.37/botocore-1.34.37.tar.gz
 Summary  : Low-level functionality of boto3
 Group    : Development/Tools
 License  : Apache-2.0
@@ -65,13 +65,13 @@ python3 components for the botocore package.
 
 
 %prep
-%setup -q -n botocore-1.34.36
-cd %{_builddir}/botocore-1.34.36
+%setup -q -n botocore-1.34.37
+cd %{_builddir}/botocore-1.34.37
 pushd ..
-cp -a botocore-1.34.36 buildavx2
+cp -a botocore-1.34.37 buildavx2
 popd
 pushd ..
-cp -a botocore-1.34.36 buildapx
+cp -a botocore-1.34.37 buildapx
 popd
 
 %build
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1707252478
+export SOURCE_DATE_EPOCH=1707339459
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
