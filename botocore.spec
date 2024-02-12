@@ -6,10 +6,10 @@
 # autospec commit: da8b975
 #
 Name     : botocore
-Version  : 1.34.39
-Release  : 1556
-URL      : https://github.com/boto/botocore/archive/1.34.39/botocore-1.34.39.tar.gz
-Source0  : https://github.com/boto/botocore/archive/1.34.39/botocore-1.34.39.tar.gz
+Version  : 1.34.40
+Release  : 1557
+URL      : https://github.com/boto/botocore/archive/1.34.40/botocore-1.34.40.tar.gz
+Source0  : https://github.com/boto/botocore/archive/1.34.40/botocore-1.34.40.tar.gz
 Summary  : Low-level functionality of boto3
 Group    : Development/Tools
 License  : Apache-2.0
@@ -65,13 +65,10 @@ python3 components for the botocore package.
 
 
 %prep
-%setup -q -n botocore-1.34.39
-cd %{_builddir}/botocore-1.34.39
+%setup -q -n botocore-1.34.40
+cd %{_builddir}/botocore-1.34.40
 pushd ..
-cp -a botocore-1.34.39 buildavx2
-popd
-pushd ..
-cp -a botocore-1.34.39 buildapx
+cp -a botocore-1.34.40 buildavx2
 popd
 
 %build
@@ -79,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1707512348
+export SOURCE_DATE_EPOCH=1707770975
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -102,17 +99,6 @@ CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 CXXFLAGS="$CLEAR_INTERMEDIATE_CXXFLAGS -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS -march=x86-64-v3 "
-LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS -march=x86-64-v3 "
-pypi-dep-fix.py . urllib3
-python3 -m build --wheel --skip-dependency-check --no-isolation
-
-popd
-pushd ../buildapx/
-CC=gcc-14
-CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -march=x86-64-v3 -mapxf -mavx10.1 -Wl,-z,x86-64-v3 "
-CXXFLAGS="$CLEAR_INTERMEDIATE_CXXFLAGS -march=x86-64-v3 -Wl,-z,x86-64-v3 "
-FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -march=x86-64-v3 -mapxf -mavx10.1 -Wl,-z,x86-64-v3 "
-FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS -march=x86-64-v3 -mapxf -mavx10.1 "
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS -march=x86-64-v3 "
 pypi-dep-fix.py . urllib3
 python3 -m build --wheel --skip-dependency-check --no-isolation
@@ -160,17 +146,7 @@ FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS -march=x86-64-v3 "
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS -march=x86-64-v3 "
 python3 -m installer --destdir=%{buildroot}-v3 dist/*.whl
 popd
-pushd ../buildapx/
-CC=gcc-14
-CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -march=x86-64-v3 -mapxf -mavx10.1 -Wl,-z,x86-64-v3 "
-CXXFLAGS="$CLEAR_INTERMEDIATE_CXXFLAGS -march=x86-64-v3 -Wl,-z,x86-64-v3 "
-FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -march=x86-64-v3 -mapxf -mavx10.1 -Wl,-z,x86-64-v3 "
-FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS -march=x86-64-v3 -mapxf -mavx10.1 "
-LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS -march=x86-64-v3 "
-python3 -m installer --destdir=%{buildroot}-va dist/*.whl
-popd
 /usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
-/usr/bin/elf-move.py apx %{buildroot}-va %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
