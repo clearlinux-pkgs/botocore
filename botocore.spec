@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : botocore
-Version  : 1.35.49
-Release  : 1732
-URL      : https://github.com/boto/botocore/archive/1.35.49/botocore-1.35.49.tar.gz
-Source0  : https://github.com/boto/botocore/archive/1.35.49/botocore-1.35.49.tar.gz
+Version  : 1.35.50
+Release  : 1733
+URL      : https://github.com/boto/botocore/archive/1.35.50/botocore-1.35.50.tar.gz
+Source0  : https://github.com/boto/botocore/archive/1.35.50/botocore-1.35.50.tar.gz
 Summary  : Low-level functionality of boto3
 Group    : Development/Tools
 License  : Apache-2.0
@@ -20,8 +20,8 @@ Requires: pypi(jmespath)
 Requires: pypi(python_dateutil)
 Requires: pypi(urllib3)
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(dateutil)
 BuildRequires : pypi(jsonschema)
-BuildRequires : pypi(pyproject_hooks)
 BuildRequires : pypi(pytest)
 BuildRequires : pypi-pytest
 # Suppress stripping binaries
@@ -63,10 +63,10 @@ python3 components for the botocore package.
 
 
 %prep
-%setup -q -n botocore-1.35.49
-cd %{_builddir}/botocore-1.35.49
+%setup -q -n botocore-1.35.50
+cd %{_builddir}/botocore-1.35.50
 pushd ..
-cp -a botocore-1.35.49 buildavx2
+cp -a botocore-1.35.50 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1729893308
+export SOURCE_DATE_EPOCH=1730144656
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
