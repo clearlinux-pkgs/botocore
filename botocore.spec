@@ -7,7 +7,7 @@
 #
 Name     : botocore
 Version  : 1.35.50
-Release  : 1733
+Release  : 1734
 URL      : https://github.com/boto/botocore/archive/1.35.50/botocore-1.35.50.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.35.50/botocore-1.35.50.tar.gz
 Summary  : Low-level functionality of boto3
