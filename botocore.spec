@@ -7,7 +7,7 @@
 #
 Name     : botocore
 Version  : 1.37.25
-Release  : 1825
+Release  : 1826
 URL      : https://github.com/boto/botocore/archive/1.37.25/botocore-1.37.25.tar.gz
 Source0  : https://github.com/boto/botocore/archive/1.37.25/botocore-1.37.25.tar.gz
 Summary  : Low-level functionality of boto3
